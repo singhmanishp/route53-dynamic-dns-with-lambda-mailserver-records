@@ -5,16 +5,17 @@
 Code and instructions for the version described in the blog can be found in the [v1](./v1/)  folder of this repository.*   
 
 The project implements a serverless dynamic DNS system using AWS Lambda, Amazon API Gateway, Amazon Route 53 and Amazon DynamoDB.   
-A bash reference client *route53-ddns-client.sh* is included, but the api calls for the system can be easily implemented in other languages.  
+~~A bash reference client *route53-ddns-client.sh* is included, but the api calls for the system can be easily implemented in other languages.~~
 The benefits and overall architecture of the system described in [Building a Serverless Dynamic DNS System with AWS](https://medium.com/aws-activate-startup-blog/building-a-serverless-dynamic-dns-system-with-aws-a32256f0a1d8) are still accurate.  
 
 #### The current project supports:
-- One step provisioning via AWS CloudFormation  
-- System configuration in Amazon DynamoDB   
-- ipv6 support   
-- Internal ip address (rfc1918) support  
-- Custom API endpoint hostname
+- One step provisioning via AWS CloudFormation  **(Not tested for this fork)**
+~~- System configuration in Amazon DynamoDB~~
+~~- ipv6 support~~ 
+~~- Internal ip address (rfc1918) support  ~~
+~~- Custom API endpoint hostname~~
 - Network discovery: Enables a single host on a network segment to set DNS entries for multiple other hosts on the same network.
+**- Changes DNS recordsets so that all the necessary entries are updated to reflect the changed IP address. Example: TXT and PTR records.
 
 ---
 ###### *Navigate* | [*Top*](#route53-dynamic-dns-with-lambda) | [*Setup*](#setup-guide) | [*Outputs*](#cloudformation-stack-outputs) | [*Configuration*](#configuration-guide) | [*Security*](#security-considerations) | [*Network Discovery*](#network-discovery) | [*API Reference*](#api-reference) |   
